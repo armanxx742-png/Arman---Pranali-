@@ -1,1 +1,316 @@
 
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arman ❤️ Pranali</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: white;
+  text-align: center;
+  background: linear-gradient(-45deg,
+    #240046, #9d174d, #ff4d8d, #4a1942);
+  background-size: 400% 400%;
+  animation: bgMove 12s ease infinite;
+}
+
+@keyframes bgMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.container {
+  min-height: 100vh;
+  padding: 45px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 430px;
+  padding: 30px 20px;
+  border: 1px solid #ffffff55;
+  border-radius: 28px;
+  background: #ffffff16;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 35px #ff80bf55;
+  animation: appear 1.5s ease;
+}
+
+@keyframes appear {
+  from {opacity: 0; transform: translateY(35px) scale(.94);}
+  to {opacity: 1; transform: translateY(0) scale(1);}
+}
+
+h1 {
+  font-size: clamp(28px, 8vw, 40px);
+  margin-bottom: 14px;
+  text-shadow: 0 0 15px #ffb6da;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {text-shadow: 0 0 8px #ffb6da;}
+  to {text-shadow: 0 0 25px #ff1493;}
+}
+
+.subtitle {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.heart {
+  font-size: 85px;
+  display: inline-block;
+  animation: heartbeat 1.1s infinite;
+  filter: drop-shadow(0 0 16px #ff4d8d);
+}
+
+@keyframes heartbeat {
+  0%, 100% {transform: scale(1);}
+  15% {transform: scale(1.18);}
+  30% {transform: scale(1);}
+  45% {transform: scale(1.12);}
+}
+
+.names {
+  font-size: 23px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  padding: 13px 20px;
+  margin: 8px 4px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+}
+
+button:active {
+  transform: scale(.94);
+}
+
+.yes {
+  color: #a00050;
+  background: #fff;
+  box-shadow: 0 0 15px #ffb6da;
+}
+
+.no, .music {
+  color: white;
+  background: #ffffff25;
+  border: 1px solid #ffffff80;
+}
+
+.yes:hover, .music:hover, .no:hover {
+  transform: scale(1.07);
+}
+
+#message {
+  display: none;
+  margin: 20px 0 5px;
+  padding: 18px;
+  border-radius: 18px;
+  background: #ffffff20;
+  line-height: 1.9;
+  animation: appear 1s ease;
+}
+
+.footer {
+  margin-top: 24px;
+  font-size: 12px;
+  opacity: .85;
+}
+
+.floating {
+  position: fixed;
+  bottom: -40px;
+  pointer-events: none;
+  z-index: 5;
+  animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+  from {transform: translateY(0) rotate(0deg); opacity: .9;}
+  to {transform: translateY(-115vh) rotate(360deg); opacity: 0;}
+}
+
+.sparkle {
+  animation: sparkle 2s infinite alternate;
+}
+
+@keyframes sparkle {
+  from {opacity: .5;}
+  to {opacity: 1;}
+}
+
+#surprise {
+  display: none;
+  margin-top: 16px;
+  animation: appear 1s ease;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <main class="card">
+
+    <p class="sparkle">✨ Ek chhoti si love story ✨</p>
+
+    <h1>Arman ❤️ Pranali</h1>
+
+    <div class="heart">💖</div>
+
+    <p class="names">You & Me — Forever?</p>
+
+    <p class="subtitle">
+      Tum meri kahani ka woh hissa ho,<br>
+      jise main har baar dobara padhna chahunga. 🌸
+    </p>
+
+    <button class="music" id="musicBtn" onclick="toggleMusic()">
+      🎵 Play Song
+    </button>
+
+    <audio id="song" loop preload="none">
+      <source src="song.mp3" type="audio/mpeg">
+    </audio>
+
+    <hr style="border:0;border-top:1px solid #ffffff50;margin:22px 0;">
+
+    <h3>Kya tum meri special person banogi? 🥹</h3>
+
+    <button class="yes" onclick="sayYes()">
+      Yes ❤️
+    </button>
+
+    <button class="no" id="noBtn" onclick="sayNo()">
+      No 🙈
+    </button>
+
+    <div id="message">
+      💌 <h3>Mere dil ki baat</h3>
+      <p>
+        Pranali, tumhari muskurahat meri favourite hai.
+        Zindagi chahe jaisi bhi ho, tumhare saath
+        chhote-chhote pal bhi khaas lagte hain. ❤️
+      </p>
+      <p style="margin-top:12px;">
+        — Sirf tumhare liye, Arman 💗
+      </p>
+    </div>
+
+    <div id="surprise">
+      <div style="font-size:45px;">💐💖🌹</div>
+      <p>Ek virtual hug aur dher saara pyaar!</p>
+    </div>
+
+    <p class="footer">
+      Made with ❤️ by Arman
+    </p>
+
+  </main>
+</div>
+
+<script>
+const song = document.getElementById("song");
+const musicBtn = document.getElementById("musicBtn");
+
+async function toggleMusic() {
+  if (song.paused) {
+    try {
+      await song.play();
+      musicBtn.textContent = "⏸ Pause Song";
+    } catch (error) {
+      alert("Song nahi chala. Check karo ki song.mp3 file upload hai.");
+    }
+  } else {
+    song.pause();
+    musicBtn.textContent = "🎵 Play Song";
+  }
+}
+
+function sayYes() {
+  document.getElementById("message").style.display = "block";
+  document.getElementById("surprise").style.display = "block";
+  document.getElementById("message").scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+  burstHearts();
+}
+
+let noCount = 0;
+
+function sayNo() {
+  const btn = document.getElementById("noBtn");
+  noCount++;
+
+  const messages = [
+    "Ek baar aur soch lo 🥹",
+    "Please? 🌸",
+    "Surprise toh dekho! 💗",
+    "Theek hai, tumhari marzi ❤️"
+  ];
+
+  btn.textContent = messages[Math.min(noCount - 1, 3)];
+
+  if (noCount < 4) {
+    btn.style.transform =
+      "translate(" + (Math.random() * 30 - 15) +
+      "px," + (Math.random() * 20 - 10) + "px)";
+  }
+}
+
+function makeHeart() {
+  const heart = document.createElement("span");
+  const symbols = ["❤️", "💗", "💕", "💖", "🌸", "✨"];
+
+  heart.className = "floating";
+  heart.textContent = symbols[
+    Math.floor(Math.random() * symbols.length)
+  ];
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (16 + Math.random() * 24) + "px";
+  heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 10000);
+}
+
+function burstHearts() {
+  for (let i = 0; i < 24; i++) {
+    setTimeout(makeHeart, i * 100);
+  }
+}
+
+setInterval(makeHeart, 450);
+</script>
+
+</body>
+</html>
