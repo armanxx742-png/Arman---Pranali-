@@ -1,17 +1,121 @@
-A little corner of the internet, just for us
-Arman ♥
-Pranali
-Some people make ordinary moments feel special. This little page is a reminder that the smallest memories can mean the most.
-Open a little surprise ✨ ♫ Play music
-For the music button, add your own audio file named song.mp3 to this same repository folder.
-♡ ♥ ♡
-Dear Pranali,
-Not every feeling is easy to put into words, so this page is a small way to say: you matter, the memories matter, and the little things we share deserve to be remembered.
-May every new day bring more smiles, kind words, laughter, and moments worth keeping close.
-— Arman ♥
-🌙 ✨ 🌷
-Tap the surprise button for a little message.
-Our little reminder
-Be kind. Be honest. Keep making good memories.
-A relationship feels best when both people feel respected, comfortable, and free to be themselves.
-Made with ♥ by Arman · A tiny page with a big feeling
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>अरमान ❤️ प्रनाली</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3, #ffc3a0);
+            color: #fff;
+            padding: 20px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 420px;
+            background: rgba(255, 255, 255, 0.18);
+            padding: 30px 20px;
+            border-radius: 25px;
+            box-shadow: 0 8px 30px rgba(80, 0, 30, 0.2);
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        .heart {
+            font-size: 65px;
+            animation: dhadkan 1s infinite;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        button {
+            background: #fff;
+            color: #e91e63;
+            border: none;
+            border-radius: 25px;
+            padding: 13px 22px;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 12px;
+            cursor: pointer;
+        }
+
+        #sandesh {
+            display: none;
+            margin-top: 20px;
+            background: rgba(255,255,255,0.15);
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        @keyframes dhadkan {
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="heart">❤️</div>
+
+        <h1>अरमान ❤️ प्रनाली</h1>
+
+        <p>
+            तुम्हारे लिए एक छोटी-सी दुनिया बनाई है,
+            जिसमें हर खुशी तुम्हारे नाम सजाई है।
+        </p>
+
+        <p>
+            तुम मेरे लिए बहुत खास हो। 💕
+            तुम्हारी मुस्कान मेरी सबसे प्यारी खुशी है।
+        </p>
+
+        <button onclick="sandeshDikhao()">
+            ❤️ मेरे दिल की बात पढ़ो
+        </button>
+
+        <div id="sandesh">
+            <h2>मेरी प्यारी प्रनाली 💖</h2>
+            <p>
+                शब्दों में बता पाना आसान नहीं,
+                तुम मेरे लिए कितनी खास हो।
+                बस इतना जान लो,
+                तुम्हारी खुशी मेरे लिए बहुत मायने रखती है।
+            </p>
+            <p>हमेशा खुश रहना। ❤️</p>
+        </div>
+
+        <p style="font-size:14px;">
+            प्यार से बनाया गया ❤️
+        </p>
+    </div>
+
+    <script>
+        function sandeshDikhao() {
+            document.getElementById("sandesh").style.display = "block";
+        }
+    </script>
+</body>
+</html>
